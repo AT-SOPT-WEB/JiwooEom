@@ -1,0 +1,38 @@
+body {
+    background-color: #f0f0f0;
+    padding: 20px
+}
+
+header {
+    background-color: rgb(53, 151, 248);
+    color: white;
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+main {
+    display: flex;
+    margin: 20px 0;
+    gap: 20px
+}
+
+section {
+    flex: 2;
+    background-color: white;
+    padding: 20px;
+}
+
+aside {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+}
+
+footer {
+    background-color: rgb(53, 151, 248);
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
