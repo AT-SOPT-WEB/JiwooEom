@@ -116,7 +116,7 @@ aside ul a {
 section {
   width: calc(100% - 16rem);
   margin-left: calc(12rem + 4rem);
-  min-width: 18rem; /* 최소 너비 설정 */
+  min-width: 18rem;
 }
 
 /* 홈 상단 섹션 */
@@ -309,12 +309,14 @@ footer {
     left: 1rem;
     top: 10rem;
   }
+
   section {
-    width: calc(100vw - 14rem); /* aside 너비 + 여백 피해서 */
+    width: calc(100vw - 14rem);
     margin-left: calc(12rem + 2rem);
   }
+
   .top-section {
-    grid-template-columns: repeat(2, 1fr); /* 작은 화면에 맞게 이미지 줄 수 조정 */
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .card-list {
