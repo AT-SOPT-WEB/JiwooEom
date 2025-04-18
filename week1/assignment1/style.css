@@ -1,0 +1,339 @@
+/* 기본 설정 */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 헤더 */
+header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(245, 175, 175);
+  padding: 0.35rem 1.5rem;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+.logo,
+header h1,
+.menu-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+header button {
+  background-color: transparent;
+  border: none;
+}
+
+.logo {
+  justify-content: flex-start;
+}
+
+.menu-bar {
+  justify-content: flex-end;
+}
+
+.logo img,
+.menu-bar img {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+main {
+  padding: 8.5rem 1rem 5.5rem 1rem;
+  position: relative;
+}
+
+/* 네비게이션 */
+aside {
+  position: fixed;
+  top: 10rem;
+  left: 2rem;
+  width: 12rem;
+  height: 10.5rem;
+  background-color: rgb(245, 175, 175);
+  border-radius: 0.75rem;
+  padding: 0.625rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 4;
+}
+
+aside h3 {
+  color: white;
+  margin: 0.8rem 0;
+}
+
+aside ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+aside ul li {
+  color: white;
+  background-color: white;
+  padding: 0.4rem 0.5rem;
+  cursor: pointer;
+}
+
+aside ul li:first-child {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+aside ul li:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+aside ul li:hover {
+  background-color: rgb(163, 213, 242);
+}
+
+aside ul a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  display: block;
+}
+
+section {
+  width: calc(100% - 16rem);
+  margin-left: calc(12rem + 4rem);
+  min-width: 18rem;
+}
+
+/* 홈 상단 섹션 */
+.top-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 10rem;
+  gap: 1rem;
+  padding: 2rem 2rem 2rem;
+  background-color: rgb(157, 196, 221);
+  border-radius: 0.5rem;
+}
+
+.top-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+.top-section img:nth-child(1) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.top-section img:nth-child(2) {
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+}
+
+.top-section img:nth-child(3) {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+.top-section img:nth-child(4) {
+  grid-column: 1 / 4;
+  grid-row: 3 / 5;
+}
+
+.top-section img:nth-child(5) {
+  grid-column: 4 / 5;
+  grid-row: 3 / 5;
+}
+
+/* 메인 섹션 */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  margin-top: 1.125rem;
+}
+
+.main-section {
+  width: 100%;
+  background-color: rgb(157, 196, 221);
+  border-radius: 0.5rem;
+  position: relative;
+  padding: 0.43rem 1.625rem 2rem;
+  box-sizing: border-box;
+}
+
+.main-section h2 {
+  color: white;
+}
+
+.main-section h4, p {
+  margin: 0;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.3rem;
+}
+
+.card {
+  flex-shrink: 0;
+  width: 13rem;
+  height: 17rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 0.625rem;
+  gap: 0.5rem;
+  transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: rgb(79, 150, 194);
+}
+
+.card img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.like-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 1.2rem;
+  color: #b3b3b3;
+  transition: color 0.1s ease;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.like-btn:hover {
+  color: rgb(245, 175, 175);
+}
+
+/* 무한배너 */
+.infinite-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 3em;
+  padding: 1rem 0;
+  height: 15rem;
+}
+
+.scroll-list {
+  display: flex;
+  gap: 0.75rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.scroll-list.first {
+  animation: scroll-left 20s linear infinite;
+}
+
+.scroll-list.second {
+  animation: scroll-left-second 20s linear infinite;
+  margin-left: -1.75rem;
+}
+
+.scroll-list li {
+  flex-shrink: 0;
+  width: 15rem;
+  height: 15rem;
+  list-style: none;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.scroll-list img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-left-second {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* 푸터 */
+footer {
+  position: relative;
+  background-color: rgb(245, 175, 175);
+  color: white;
+  width: 100%;
+  height: 3.75rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 550px) {
+  aside {
+    position: fixed;
+    width: 12rem;
+    left: 1rem;
+    top: 10rem;
+  }
+
+  section {
+    width: calc(100vw - 14rem);
+    margin-left: calc(12rem + 2rem);
+  }
+
+  .top-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-list {
+    justify-content: flex-start;
+  }
+}
