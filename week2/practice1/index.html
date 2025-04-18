@@ -1,0 +1,38 @@
+<!-- index.html -->
+<!--버튼을 클릭하면 1~3000까지의 숫자 리스트가 화면에 출력되게 해보자. (반복문 사용)-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onClick="onClick()">리스트 추가하기</button>
+    <ul id="ul"></ul>
+  </body>
+
+  <script>
+    // 안 좋은 예시시
+    /*const onClick = () => {
+      const ul = document.getElementById('ul');
+
+      for (let i = 0; i < 3000; i++) {
+        ul.innerHTML += <li>${i}</li>; // DOM을 3,000번 수정 🥵
+      }
+    };*/
+
+    // 좋은 예시
+    const onClick = () => {
+      const ul = document.getElementById('ul');
+      let list = '';
+
+      for (let i = 1; i <= 3000; i++) {
+        list += `<li>${i}</li>`;
+      }
+
+      ul.innerHTML = list; // 변경사항을 모아서 DOM을 1번만 수정 ☺️, 22배 성능 개선
+    };
+  </script>
+</html>

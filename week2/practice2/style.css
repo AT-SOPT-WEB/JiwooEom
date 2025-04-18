@@ -1,0 +1,31 @@
+.add-section {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.add-btn {
+    background-color: #2d9c31d2;
+    width: 100px;
+    height: 45px;
+    border: none;
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.input {
+    width: 200px;
+    height: 40px;
+    padding: 10px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-right: 5px;
+}
