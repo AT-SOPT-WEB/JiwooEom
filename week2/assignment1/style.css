@@ -1,0 +1,246 @@
+/* 기본 설정 */
+:root {
+    --main-color: rgb(157, 196, 221);
+    --point-color: rgb(245, 175, 175);
+    --border-radius: 0.5rem;
+    --font-size-base: 1rem;
+    --font-size-sm: 0.875rem;
+}
+  
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    font-size: 16px;
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fefefe;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}  
+  
+/* 상단 섹션(필터링) */
+header {
+    display: flex;
+    gap: 0.8rem;
+    padding: 1.5rem 0 0 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header button {
+    padding: 0.5rem 1.2rem;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+header button:hover {
+    background-color: var(--point-color);
+}
+
+.priority-filter {
+    position: relative;
+}
+
+.priority-btn i {
+    margin-left: 0.4rem;
+}
+
+.priority-dropdown {
+    position: absolute;
+    top: 2rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    min-width: 6rem;
+    text-align: center;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.priority-dropdown.hidden {
+    display: none;
+}
+
+.priority-dropdown li {
+    padding: 0.4rem;
+    cursor: pointer;
+}
+
+.priority-dropdown li:hover {
+    background-color: var(--point-color);
+    color: white;
+}
+
+/* 할 일 추가 섹션 */
+.add-section {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.75rem 0 1rem 0;
+}
+
+.input {
+    padding: 0.6rem 1rem;
+    font-size: var(--font-size-sm);
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+}
+
+.priority-select {
+    padding: 0.6rem 1rem;
+    font-size: var(--font-size-sm);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.input:focus,
+.priority-select:focus {
+    outline: none; 
+    transition: all 0.1s ease;
+    box-shadow: 0 0 0.3rem rgba(157, 196, 221, 0.5);
+}
+
+.add-btn {
+    padding: 0.5rem 1.2rem;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-base);
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: var(--point-color);
+}
+
+/* 삭제-완료 버튼 */
+.edit-section {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 0 0 1rem 0;
+}
+
+.delete-btn,
+.finish-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: var(--font-size-base);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: white;
+}
+
+.delete-btn:hover,
+.finish-btn:hover {
+    background-color: var(--point-color);
+}
+
+/* todo 테이블 */
+.todo-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.col-checkbox {
+    width: 14%;
+}
+.col-priority {
+    width: 17%;
+}
+.col-completed {
+    width: 17%;
+}
+.col-title {
+    width: 52%;
+}
+  
+.todo-table thead {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.todo-table th,
+.todo-table td {
+    padding: 0.8rem 1rem;
+    text-align: center;
+    font-size: var(--font-size-sm);
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.todo-table th:last-child,
+.todo-table td:last-child {
+    border-right: none;
+}
+
+.todo-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* 모달 */
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    min-width: 17.5rem;
+}
+
+.modal-close-btn {
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+    font-size: var(--font-size-base);
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.modal-close-btn:hover {
+    background-color: var(--point-color);
+}
