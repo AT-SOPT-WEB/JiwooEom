@@ -21,13 +21,6 @@ function updateTodoList(todos) {
     localStorage.setItem('todos', JSON.stringify(todos));
 } 
 
-// 전체 선택 체크박스 상태 변경 시, 모든 개별 체크박스 상태 동기화
-const selectAllCheckbox = document.getElementById('select-all');
-selectAllCheckbox.addEventListener('change', () => {
-    const checkboxes = document.querySelectorAll('.todo-checkbox');
-    checkboxes.forEach(checkbox => checkbox.checked = selectAllCheckbox.checked);
-});
-
 // ====================== todo 테이블 ========================= //
 // 테이블 header 렌더링 함수
 function renderHeader() {
@@ -118,6 +111,13 @@ function renderTable() {
 
 // 초기 렌더링 실행
 renderTable();
+
+// 전체 선택 체크박스 상태 변경 시, 모든 개별 체크박스 상태 동기화
+const selectAllCheckbox = document.getElementById('select-all');
+selectAllCheckbox.addEventListener('change', () => {
+    const checkboxes = document.querySelectorAll('.todo-checkbox');
+    checkboxes.forEach(checkbox => checkbox.checked = selectAllCheckbox.checked);
+});
 
 // ====================== 상단 섹션 (필터링) ========================= //
 // 전체 보기
