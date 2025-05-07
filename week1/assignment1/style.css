@@ -41,6 +41,11 @@ header h1 {
   text-align: center;
 }
 
+header button {
+  background-color: transparent;
+  border: none;
+}
+
 .logo {
   justify-content: flex-start;
 }
@@ -53,10 +58,11 @@ header h1 {
 .menu-bar img {
   width: 1.5rem;
   height: 1.5rem;
+  cursor: pointer;
 }
 
 main {
-  padding: 8.5rem 1rem;
+  padding: 8.5rem 1rem 5.5rem 1rem;
   position: relative;
 }
 
@@ -70,7 +76,6 @@ aside {
   background-color: rgb(245, 175, 175);
   border-radius: 0.75rem;
   padding: 0.625rem;
-  cursor: pointer;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
   text-align: center;
   z-index: 4;
@@ -86,12 +91,14 @@ aside ul {
   margin: 0;
   display: flex;
   flex-direction: column;
+  list-style: none;
 }
 
 aside ul li {
   color: white;
   background-color: white;
   padding: 0.4rem 0.5rem;
+  cursor: pointer;
 }
 
 aside ul li:first-child {
@@ -164,6 +171,13 @@ section {
 }
 
 /* 메인 섹션 */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  margin-top: 1.125rem;
+}
+
 .main-section {
   width: 100%;
   background-color: rgb(157, 196, 221);
@@ -171,7 +185,6 @@ section {
   position: relative;
   padding: 0.43rem 1.625rem 2rem;
   box-sizing: border-box;
-  margin-top: 1.125rem;
 }
 
 .main-section h2 {
@@ -214,15 +227,18 @@ section {
   object-fit: cover;
 }
 
-.heart {
-  display: inline-block;
+.like-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
   font-size: 1.2rem;
   color: #b3b3b3;
   transition: color 0.1s ease;
   cursor: pointer;
+  margin-top: 0.5rem;
 }
 
-.heart:hover {
+.like-btn:hover {
   color: rgb(245, 175, 175);
 }
 
@@ -289,9 +305,7 @@ section {
 
 /* 푸터 */
 footer {
-  position: absolute;
-  bottom: 0;
-  text-align: left;
+  position: relative;
   background-color: rgb(245, 175, 175);
   color: white;
   width: 100%;
