@@ -1,0 +1,16 @@
+/* Header.module.css */
+
+.header {
+    padding: 1rem;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    background-color: rgb(245, 175, 175);
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
+    margin: 0;
+    padding: 1rem;
+}
