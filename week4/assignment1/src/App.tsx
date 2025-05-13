@@ -1,11 +1,11 @@
-import './styles/global.css.ts';
+import * as styles from './App.css';
 
 const App = () => {
   return (
-    <>
-      <h1>4주차 과제 초기 세팅</h1>     
-    </>
-  )
-}
+    <div>
+      <h1 className={styles.h1Style}>4주차 과제 초기 세팅</h1>
+    </div>
+  );
+};
 
-export default App
+export default App;

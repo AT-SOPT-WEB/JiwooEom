@@ -9,6 +9,6 @@ globalStyle('html', {
     margin: '0',
     padding: '0',
     fontFamily: `'Arial', 'Apple SD Gothic Neo', 'Segoe UI', sans-serif`,
-    backgroundColor: 'rgb(245, 245, 245)',
+    backgroundColor: 'rgb(255, 255, 255)',
     boxSizing: 'border-box',
   });

@@ -1,15 +1,15 @@
-import { createThemeContract } from '@vanilla-extract/css';
+import { createGlobalTheme } from '@vanilla-extract/css';
 
-export const vars = createThemeContract({
-  colors: {
-    primary: null,
-    point: null,
+export const vars = createGlobalTheme(':root', {
+  color: {
+    primary: 'rgb(157, 196, 221)',
+    point: 'rgb(245, 175, 175)',
   },
-  fonts: {
-    xl: null,
-    lg: null,
-    md: null,
-    sm: null,
-    xs: null,
+  size: {
+    xl: '3rem',
+    lg: '2.5em',
+    md: '2rem',
+    sm: '1.8rem',
+    xs: '1.5rem',
   },
 });
