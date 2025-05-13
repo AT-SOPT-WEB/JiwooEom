@@ -4,6 +4,8 @@ export const vars = createGlobalTheme(':root', {
   color: {
     primary: 'rgb(157, 196, 221)',
     point: 'rgb(245, 175, 175)',
+    black: 'rgb(0, 0, 0)',
+    white: 'rgb(255, 255, 255)',
   },
   size: {
     xl: '3rem',
