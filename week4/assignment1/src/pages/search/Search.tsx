@@ -25,6 +25,8 @@ const Search = () => {
   } finally {
     setIsSearched(true);
   }
+
+  setSearch('')
 }; 
 
   return (
