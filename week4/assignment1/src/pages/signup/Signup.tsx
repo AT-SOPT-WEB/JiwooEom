@@ -132,7 +132,7 @@ const Signup = () => {
 
         <div className={styles.moveToLogin}>
             <p className={styles.memberText}>이미 회원이신가요?</p>
-              <Button variant='secondary' className={styles.loginBtn} onClick={() => navigate('/login')}>
+              <Button variant='secondary' onClick={() => navigate('/login')}>
                 로그인
               </Button>
         </div>

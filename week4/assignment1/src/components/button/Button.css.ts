@@ -30,6 +30,7 @@ export const button = recipe({
         color: vars.color.white,
       },
       secondary: {
+        width: 'auto',
         padding: '0',
         border: 'none',
         backgroundColor: 'transparent',

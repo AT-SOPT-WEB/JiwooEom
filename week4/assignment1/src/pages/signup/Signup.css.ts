@@ -21,14 +21,3 @@ export const moveToLogin = style({
 export const memberText = style({
     margin: '0',
 });
-
-export const loginBtn = style({
-    padding: '0',
-    border: 'none',
-    backgroundColor: 'transparent',
-    color: vars.color.primary,
-    fontSize: vars.size.xs,
-    fontWeight: 400,
-    textDecoration: 'underline',
-    cursor: 'pointer',
-});
