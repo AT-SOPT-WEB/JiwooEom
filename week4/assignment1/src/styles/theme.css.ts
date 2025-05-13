@@ -6,6 +6,8 @@ export const vars = createGlobalTheme(':root', {
     point: 'rgb(245, 175, 175)',
     black: 'rgb(0, 0, 0)',
     white: 'rgb(255, 255, 255)',
+    gray: 'rgb(170, 170, 170)',
+    danger: 'rgb(255, 0, 0)',
   },
   size: {
     xl: '3rem',

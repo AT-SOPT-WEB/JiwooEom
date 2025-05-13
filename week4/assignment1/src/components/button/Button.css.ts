@@ -4,13 +4,24 @@ import { vars } from '../../styles/theme.css';
 export const button = recipe({
   base: {
     width: '50rem',
-    padding: '0.75rem 1rem',
-    borderRadius: '0.375rem',
+    padding: '1rem',
+    borderRadius: '0.5rem',
     fontWeight: 600,
     textAlign: 'center',
     fontSize: vars.size.xs,
     border: 'none',
     cursor: 'pointer',
+    transition: 'background-color 0.2s',
+
+    selectors: {
+      '&:disabled': {
+        backgroundColor: vars.color.gray, 
+        color: vars.color.white,         
+        cursor: 'not-allowed',
+        opacity: 0.6,
+      },
+    },
+
   },
   variants: {
     variant: {
@@ -19,14 +30,13 @@ export const button = recipe({
         color: vars.color.white,
       },
       secondary: {
+        padding: '0',
+        border: 'none',
         backgroundColor: 'transparent',
-        color: vars.color.point,
-        border: `0.3rem solid ${vars.color.point}`,
-      },
-    },
-    fullWidth: {
-      true: {
-        width: '100%',
+        color: vars.color.primary,
+        fontSize: vars.size.xs,
+        fontWeight: 400,
+        textDecoration: 'underline',
       },
     },
   },

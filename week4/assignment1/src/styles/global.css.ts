@@ -2,7 +2,7 @@ import { globalStyle } from '@vanilla-extract/css';
 
 globalStyle('html', {
     scrollBehavior: 'smooth',
-    fontSize: '10px', // 1rem = 10px (기존에는 16px로 설정했다가 합세 연습할 겸 10px로 설정)
+    fontSize: '10px', // 1rem = 10px
   });
 
   globalStyle('body', {
