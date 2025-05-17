@@ -1,22 +1,9 @@
-// Input.jsx
-
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
-
-const formStyle = css`
-  width: 35rem;
-  margin-top: 3rem;
-`;
-
-const inputStyle = (theme) => css`
-  padding: 0.5rem 0.75rem;
-  width: 100%;
-  border: 2px solid #ccc;
-  border-radius: 0.5rem;
-  font-size: ${theme.fonts.sm};
-`;
+import { useTheme } from '@emotion/react';
+import { formStyle, inputStyle } from './Input.styles';
 
 const Input = ({ input, setInput, onSubmit, placeholder, maxLength }) => {
+  const theme = useTheme();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,7 +19,7 @@ const Input = ({ input, setInput, onSubmit, placeholder, maxLength }) => {
         placeholder={placeholder}
         maxLength={maxLength}
         autoComplete="off"
-        css={inputStyle}
+        css={inputStyle(theme)}
       />
     </form>
   );
