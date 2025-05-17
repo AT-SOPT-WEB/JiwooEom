@@ -1,0 +1,11 @@
+meta {
+  name: Get Pockemon List
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://pokeapi.co/api/v2/pokemon?limit=40
+  body: none
+  auth: inherit
+}
