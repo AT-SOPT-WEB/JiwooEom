@@ -13,10 +13,9 @@ export const useGithubSearch = () => {
   }, []);
 
   useEffect(() => {
-    if (recentUsers.length > 0) {
-      localStorage.setItem('userList', JSON.stringify(recentUsers));
-    }
+    localStorage.setItem('userList', JSON.stringify(recentUsers));
   }, [recentUsers]);
+
 
   const saveRecentUser = (recentUser) => {
     if (!recentUser) return;
