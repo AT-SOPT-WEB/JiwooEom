@@ -2,7 +2,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
 import { useState } from 'react';
 
-const userId = 100;
+const userId = 452;
 
 const getMyNickname = async (userId: number) => {
   const response = await axios.get('https://api.atsopt-seminar4.site/api/v1/users/me', {
