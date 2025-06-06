@@ -7,32 +7,33 @@ import Title from '../../components/title/Title'
 import Input from '../../components/input/Input'
 import Button from '../../components/button/Button'
 import * as styles from './Signup.css';
+import { SignUpStep } from '../../constants/SignUpStep';
 
 const Signup = () => {
   const navigate = useNavigate();
 
-  const [step, setStep] = useState<'id' | 'password' | 'nickname'>('id');
+  const [step, setStep] = useState<SignUpStep>(SignUpStep.ID);
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
   const [passwordCheck, setPasswordCheck] = useState('');
   const [nickname, setNickname] = useState('');
 
   const handleNext = () => {
-    if (step === 'id' && id.trim()) {
-      setStep('password');
+    if (step === SignUpStep.ID && id.trim()) {
+      setStep(SignUpStep.PASSWORD);
     } else if (
-      step === 'password' && 
+      step === SignUpStep.PASSWORD && 
       password.trim() && 
       passwordCheck.trim() && 
       password === passwordCheck
     ) {
-      setStep('nickname');
+      setStep(SignUpStep.NICKNAME);
     }
   };
 
   const handleSignup = async () => {
     try {
-      await signUp({ loginId: id, password, nickname });
+      await signUp(id, password, nickname);
       alert(`${nickname}님 반갑습니다! 회원가입에 성공했어요.`);
       navigate('/login');
     } catch (error) {
@@ -46,7 +47,7 @@ const Signup = () => {
         <Title>회원가입</Title>
 
         {/* 아이디 입력 단계 */}
-        {step === 'id' && (
+        {step === SignUpStep.ID && (
           <>
             <Input
               label="아이디"
@@ -72,7 +73,7 @@ const Signup = () => {
         )}
 
         {/* 비밀번호 입력 단계 */}
-        {step === 'password' && (
+        {step === SignUpStep.PASSWORD && (
           <>
             <Input
               label="비밀번호"
@@ -110,7 +111,7 @@ const Signup = () => {
         )}
 
         {/* 닉네임 입력 단계 */}
-        {step === 'nickname' && (
+        {step === SignUpStep.NICKNAME && (
           <>
             <Input
               label="닉네임"
