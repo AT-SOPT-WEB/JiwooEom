@@ -46,7 +46,7 @@ const Search = () => {
             {nicknameList.length > 0 && (
             <ul className={styles.nicknameResult}>
               {nicknameList.map((name, index) => (
-                  <li key={index}>{name}</li>
+                  <li key={name + "-" + index}>{name}</li>
               ))}
             </ul>
             )}
