@@ -32,7 +32,7 @@ const Signup = () => {
 
   const handleSignup = async () => {
     try {
-      await signUp({ loginId: id, password, nickname }); // 👈 API 호출
+      await signUp({ loginId: id, password, nickname });
       alert(`${nickname}님 반갑습니다! 회원가입에 성공했어요.`);
       navigate('/login');
     } catch (error) {
