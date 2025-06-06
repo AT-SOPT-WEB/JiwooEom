@@ -80,6 +80,7 @@ const Signup = () => {
               placeholder="비밀번호를 입력해주세요"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              showIcon
             />
             <Input
               type="password"

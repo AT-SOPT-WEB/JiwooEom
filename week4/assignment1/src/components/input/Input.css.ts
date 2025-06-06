@@ -14,11 +14,27 @@ export const label = style({
   color: vars.color.black,
 });
 
+export const inputWrapper = style({
+  position: 'relative',
+  width: '100%',
+});
+
 export const input = style({
-  height: '2rem',
-  padding: '1rem',
+  width: '100%',
+  padding: '1rem 3rem 1rem 1rem',
   border: '0.1rem solid rgb(100, 100, 100)',
   borderRadius: '0.5rem',
   fontSize: vars.size.xs,
   color: vars.color.black,
+  boxSizing: 'border-box',
+});
+
+export const icon = style({
+  position: 'absolute',
+  top: '50%',
+  right: '1rem',
+  transform: 'translateY(-50%)',
+  fontSize: vars.size.xs,
+  color: vars.color.black,
+  cursor: 'pointer',
 });
